@@ -25,6 +25,8 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 ```{r}
 gm_data <- gapminder_unfiltered
 
+# This will summarize the data
+
 gm_data %>%
   group_by(year) %>%
   filter(lifeExp == max(lifeExp)) %>%
