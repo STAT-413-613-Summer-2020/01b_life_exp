@@ -20,4 +20,16 @@ library(gapminder)
 
 Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
-# Analysis
+# Life Expectancy Analysis
+
+```{r}
+gm_data <- gapminder_unfiltered
+
+gm_data %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  ungroup() %>%
+  select(year, country, lifeExp) %>%
+  arrange(year) -> results
+```
+
