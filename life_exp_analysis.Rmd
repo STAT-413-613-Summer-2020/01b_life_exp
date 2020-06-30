@@ -2,8 +2,10 @@
 title: "Examine Life Expectancy"
 author: "Richard Ressler"
 date: "`r Sys.Date()`"
-output: pdf_document
-urlcolor: "blue"
+output:
+  html_document:
+    df_print: paged
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -33,5 +35,8 @@ gm_data %>%
   ungroup() %>%
   select(year, country, lifeExp) %>%
   arrange(year) -> results
+
+
+# making changes
 ```
 
